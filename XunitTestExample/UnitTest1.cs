@@ -3,7 +3,31 @@ namespace XunitTestExample
     public class UnitTest1
     {
         [Fact]
-        public void SuccessCase()
+        public void SuccessCase1()
+        {
+
+        }
+
+        [Fact]
+        public void SuccessCase2()
+        {
+
+        }
+
+        [Fact]
+        public void SuccessCase3()
+        {
+
+        }
+
+        [Fact]
+        public void SuccessCase4()
+        {
+
+        }
+
+        [Fact]
+        public void SuccessCase5()
         {
 
         }
