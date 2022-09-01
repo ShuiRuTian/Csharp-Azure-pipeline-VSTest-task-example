@@ -33,9 +33,15 @@ namespace XunitTestExample
         }
 
         [Fact]
-        public void FailCase()
+        public void FailCase1()
         {
-            throw new NotImplementedException("This case should fail, by intentional.");
+            throw new NotImplementedException("Fail case 1");
+        }
+
+        [Fact]
+        public void FailCase2()
+        {
+            throw new NotImplementedException("Fail case 2");
         }
     }
 }
