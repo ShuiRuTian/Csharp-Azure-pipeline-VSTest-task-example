@@ -41,7 +41,7 @@ steps:
     collectDumpOn: onAbortOnly
     rerunFailedTests: true
     rerunType: basedOnTestFailureCount
-    rerunFailedTestCasesMaxLimit: ${{ parameters.MaxFailuresToRetry }}
+    rerunFailedTestCasesMaxLimit: 5
     rerunMaxAttempts: 2
     # testSelector: testAssemblies
     # testAssemblyVer2: |
