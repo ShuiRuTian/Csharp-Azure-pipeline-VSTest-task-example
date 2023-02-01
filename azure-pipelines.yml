@@ -32,6 +32,21 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+    # testSelector: testAssemblies
+    # testAssemblyVer2: |
+    #   ${{ parameters.TestAssemblies }}
+    # searchFolder: ${{ parameters.TestsDirectory }}\
+    # testFiltercriteria: ${{ parameters.TestFilterCriteria }}
+
+    vsTestVersion: toolsInstaller
+    batchingBasedOnAgentsOption: customBatchSize
+    batchingBasedOnExecutionTimeOption: autoBatchSize
+    dontDistribute: false
+    publishRunAttachments: true
+    diagnosticsEnabled: True
+    collectDumpOn: onAbortOnly
     rerunFailedTests: true
-    rerunFailedThreshold: 100
-    
+    rerunType: basedOnTestFailureCount
+    rerunFailedTestCasesMaxLimit: ${{ parameters.MaxFailuresToRetry }}
+    rerunMaxAttempts: 2

@@ -32,10 +32,14 @@ namespace XunitTestExample
 
         }
 
+        static int FailedCase1Count = 0;
+
         [Fact]
         public void FailCase1()
         {
-            throw new NotImplementedException("Fail case 1");
+            FailedCase1Count++;
+            if (FailedCase1Count < 10)
+                throw new NotImplementedException("Fail case 1");
         }
 
         [Fact]
